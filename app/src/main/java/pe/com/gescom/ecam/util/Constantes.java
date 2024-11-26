@@ -27,9 +27,9 @@ public class Constantes {
     public static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 843;
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 8575;
     public static final int MY_PERMISSIONS_Multiple = 8585;
-    // PERMISOS GLOBAL VARIABLES
-    public static int CODE_REQUEST_PERMISSIONS = 105;
-    public static String[] PERMISSIONS_APP = {
+    // PERMISOS CAMERA ACTIVITY
+    public static final int CODE_REQUEST_PERMISSIONS_CAMERA = 105;
+    public static final String[] PERMISSIONS_CAMERA = {
             Manifest.permission.CAMERA,
             Manifest.permission.READ_MEDIA_IMAGES};
 
@@ -107,7 +107,7 @@ public class Constantes {
         editor.apply();
     }
 
-    public static boolean hasPermissions(Context context, String... permissions) {
+    public static boolean checkPermissions(Context context, String... permissions) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
             for (String permission : permissions) {
                 if (ActivityCompat.checkSelfPermission(context, permission)

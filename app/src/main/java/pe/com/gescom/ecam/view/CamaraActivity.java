@@ -1,8 +1,5 @@
 package pe.com.gescom.ecam.view;
 
-import static pe.com.gescom.ecam.util.Constantes.CODE_REQUEST_PERMISSIONS;
-import static pe.com.gescom.ecam.util.Constantes.PERMISSIONS_APP;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -161,11 +158,12 @@ public class CamaraActivity extends AppCompatActivity implements View.OnClickLis
         constantes = new Constantes(this);
         initView();
         initEventsView();
-        checkPermissions();
+        if (!Constantes.checkPermissions(this, Constantes.PERMISSIONS_CAMERA)) {
+            ActivityCompat.requestPermissions(this, Constantes.PERMISSIONS_CAMERA, Constantes.CODE_REQUEST_PERMISSIONS_CAMERA);
+        }
         setupVibrator();
         setupCamera();
         starDemo();
-
     }
 
     private void initView() {
@@ -464,20 +462,14 @@ public class CamaraActivity extends AppCompatActivity implements View.OnClickLis
         focusCamera.startAnimation(animacionDesvanecer);
     }
 
-    private void checkPermissions() {
-        if (!Constantes.hasPermissions(this, PERMISSIONS_APP)) {
-            ActivityCompat.requestPermissions(this, PERMISSIONS_APP, CODE_REQUEST_PERMISSIONS);
-        }
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == CODE_REQUEST_PERMISSIONS) {
+        if (requestCode == Constantes.CODE_REQUEST_PERMISSIONS_CAMERA) {
             List<Integer> listPermissions = new ArrayList<>();
             for (int i : grantResults) listPermissions.add(i);
             if (listPermissions.contains((Integer) PackageManager.PERMISSION_DENIED))
-                ActivityCompat.requestPermissions(this, PERMISSIONS_APP, CODE_REQUEST_PERMISSIONS);
+                ActivityCompat.requestPermissions(this, Constantes.PERMISSIONS_CAMERA, Constantes.CODE_REQUEST_PERMISSIONS_CAMERA);
         }
     }
 
