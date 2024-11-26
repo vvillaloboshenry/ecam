@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">androideasycam</string>
-
-    <string name="toma_una_foto_a_la_lectura">Toma una foto a la lectura</string>
-    <string name="toma_una_foto_al_medidor">Toma una foto al medidor</string>
-
-</resources>
