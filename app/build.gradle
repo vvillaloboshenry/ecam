@@ -1,8 +1,5 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
-    id("maven-publish")
-    //alias(libs.plugins.android.application)
+    alias(libs.plugins.android.application)
 }
 
 android {
@@ -11,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "pe.com.gescom.ecam"
-        minSdk 24
+        minSdk 31
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -31,6 +28,7 @@ android {
 }
 
 dependencies {
+
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
