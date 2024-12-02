@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003061</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="negro">#FF000000</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="amarillo">#F9D71C</color>
+    <color name="emerald">#2ECC71</color>
+
+    <color name="overlay_transparent">#68000000</color>
+    <color name="overlay_opaco">#141414</color>
+    <color name="celeste">#FF3498DB</color>
+</resources>
