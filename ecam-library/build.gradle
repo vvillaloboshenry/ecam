@@ -1,8 +1,20 @@
-plugins {
-    alias(libs.plugins.android.library)
+buildscript {
+    ext.kotlin_version = '1.7.20'
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+    }
 
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.2'
+    }
 }
-
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
+//alias(libs.plugins.android.library)
 android {
     namespace 'com.example.ecam'
     compileSdk 34
@@ -17,6 +29,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'consumer-rules-pro'
         }
     }
     compileOptions {
@@ -25,8 +38,36 @@ android {
     }
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 dependencies {
 
     implementation libs.appcompat
     implementation libs.material
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.vvillaloboshenry'
+            artifactId = 'ecam-library'
+            version = "1.0.0"
+            pom {
+                description = 'First Android Library'
+            }
+        }
+    }
+    repositories {               // << --- ADD This
+        mavenLocal()
+    }
 }
