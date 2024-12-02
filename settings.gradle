@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ecam"
+rootProject.name = "ecam-library"
 include ':app'
 include ':ecam-library'
