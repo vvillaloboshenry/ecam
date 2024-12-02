@@ -1,4 +1,4 @@
-package pe.com.gescom.ecam.view;
+package pe.com.gescom.example.view;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -54,9 +54,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.com.gescom.ecam.R;
-import pe.com.gescom.ecam.util.CameraUtils;
-import pe.com.gescom.ecam.util.Constantes;
-import pe.com.gescom.ecam.util.VibrationUtils;
+import pe.com.gescom.example.util.CameraUtils;
+import pe.com.gescom.example.util.Constantes;
+import pe.com.gescom.example.util.VibrationUtils;
 
 public class CamaraActivity extends AppCompatActivity implements View.OnClickListener, OrientationChangeListener, View.OnLongClickListener {
     public static final String TAG_CLASS = "CamaraActivity";

@@ -1,4 +1,4 @@
-package pe.com.gescom.ecam.util;
+package pe.com.gescom.example.util;
 
 import android.hardware.Camera;
 import android.view.Surface;

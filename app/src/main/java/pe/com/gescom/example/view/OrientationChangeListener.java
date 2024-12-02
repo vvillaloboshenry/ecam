@@ -1,4 +1,4 @@
-package pe.com.gescom.ecam.view;
+package pe.com.gescom.example.view;
 
 public interface OrientationChangeListener {
     void onPortrait();

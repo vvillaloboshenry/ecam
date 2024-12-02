@@ -1,4 +1,4 @@
-package pe.com.gescom.ecam.view;
+package pe.com.gescom.example.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,8 +22,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import pe.com.gescom.ecam.util.CameraUtils;
-import pe.com.gescom.ecam.util.VibrationUtils;
+import pe.com.gescom.example.util.CameraUtils;
+import pe.com.gescom.example.util.VibrationUtils;
 
 
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback, SensorEventListener {

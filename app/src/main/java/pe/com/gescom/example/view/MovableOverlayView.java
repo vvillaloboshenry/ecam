@@ -1,4 +1,4 @@
-package pe.com.gescom.ecam.view;
+package pe.com.gescom.example.view;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import androidx.core.content.res.ResourcesCompat;
 
 import pe.com.gescom.ecam.R;
-import pe.com.gescom.ecam.util.VibrationUtils;
+import pe.com.gescom.example.util.VibrationUtils;
 
 public class MovableOverlayView extends FrameLayout {
     private float dX, dY;
