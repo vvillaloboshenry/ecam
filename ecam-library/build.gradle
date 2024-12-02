@@ -27,7 +27,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true    // Habilita la ofuscación
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             consumerProguardFiles 'consumer-rules-pro'
         }
